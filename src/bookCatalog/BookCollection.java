@@ -1,3 +1,4 @@
+package bookCatalog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,10 +45,9 @@ public class BookCollection {
     public List<Book> findBooks(Predicate<Book> searchCriteria) {
         List<Book> results = new ArrayList<Book>();
         for (Book nextBook : books) {
-            if (searchCriteria.test(nextBook)) {
+            if (searchCriteria.test(nextBook)) 
                 results.add(nextBook);
             }
-        }
         return results;
     }
     
